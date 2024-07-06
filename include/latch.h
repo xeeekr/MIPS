@@ -1,6 +1,7 @@
 #ifndef MIPS_LATCH_H
 #define MIPS_LATCH_H
 
+#include "component.h"
 #include "gate.h"
 
 class SR_LATCH : public Component {

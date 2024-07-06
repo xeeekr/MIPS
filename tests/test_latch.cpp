@@ -25,6 +25,10 @@ TEST(MipsTest_Latch, SR_LATCH) {
 	EXPECT_EQ(true, testSRLatch(srLatch, false, true, false));
 	EXPECT_EQ(false, testSRLatch(srLatch, false, true, true));
 	EXPECT_EQ(false, testSRLatch(srLatch, false, true, false));
+
+	EXPECT_EQ(false, testSRLatch(srLatch, false, true, true));
+	EXPECT_EQ(true, testSRLatch(srLatch, true, false, true));
+	EXPECT_EQ(false, testSRLatch(srLatch, false, true, true));
 }
 
 TEST(MipsTest_Latch, D_LATCH) {
@@ -37,4 +41,8 @@ TEST(MipsTest_Latch, D_LATCH) {
 	EXPECT_EQ(true, testDLatch(dLatch, false, false));
 	EXPECT_EQ(false, testDLatch(dLatch, false, true));
 	EXPECT_EQ(false, testDLatch(dLatch, false, false));
+
+	EXPECT_EQ(false, testDLatch(dLatch, false, true));
+	EXPECT_EQ(true, testDLatch(dLatch, true, true));
+	EXPECT_EQ(false, testDLatch(dLatch, false, true));
 }
