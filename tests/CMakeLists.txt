@@ -5,10 +5,12 @@ add_executable(
 
         test_gate.cpp
         test_latch.cpp
+        test_flipflop.cpp
 
         ${CMAKE_SOURCE_DIR}/src/component.cpp
         ${CMAKE_SOURCE_DIR}/src/gate.cpp
         ${CMAKE_SOURCE_DIR}/src/latch.cpp
+        ${CMAKE_SOURCE_DIR}/src/flipflop.cpp
 )
 
 target_include_directories(mips_test PUBLIC ${CMAKE_SOURCE_DIR}/include)
